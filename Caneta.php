@@ -7,8 +7,9 @@ class Caneta {
     private $memoria;
 
 public function escrever($texto){
+  
     $this->memoria= $texto;
-    echo $texto."<br>";
+    echo "<p style='color:$this->cor'>".$texto."</p>";
 
 }
 
@@ -19,9 +20,8 @@ public function desenhar($simbolo){
     echo "<br>";
 }
 public function reescrever($vezes){
-    echo "Reescrevendo...<br>";
     for($i=0;$i<$vezes;$i++){
-        echo $this->memoria."<br>";
+    $this->escrever($this->memoria);
     }
 }
 
